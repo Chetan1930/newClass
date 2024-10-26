@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Animated Navbar -->
+    <nav class="navbar">
+        <div class="logo" href="index.html">Chetan Chauhan</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="mainPage">
+        <div class="heading">
+            What do you want to <span class="learn">Learn</span> today?
+        </div>
+
+        <div class="cards">
+            <a href="#" class="card" onclick="showBooking('DBMS')">
+                <img src="https://c8.alamy.com/comp/2B9TJPC/vector-black-line-concept-of-internet-technology-dbms-2B9TJPC.jpg" alt="DBMS">
+                <div>DBMS</div>
+            </a>
+            <a href="#" class="card" onclick="showBooking('OOPS')">
+                <img src="https://media.istockphoto.com/id/147480805/photo/oop-object-oriented-programming.jpg?s=612x612&w=0&k=20&c=r47EPdaimqTUmRu4Pne6jJyi95NPWDJU3IsPW1sAPec=" alt="OOPS">
+                <div>OOPS</div>
+            </a>
+            <a href="#" class="card" onclick="showBooking('ML')">
+                <img src="https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/machine-learning-pillar-page-overview.jpeg" alt="ML">
+                <div>ML</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Booking Page Content with Animation -->
+
+    <div id="bookingPage" style="display: none;">
+        <div class="booking-container">
+            <div class="course-info">
+                <h2 id="selectedCourse">Course Name</h2>
+                <p>Select your preferred date and time slot</p>
+            </div>
+
+            <div class="slot-options">
+                <div class="slot-card" onclick="selectDate(this, 'today')">
+                    <h3>Today</h3>
+                    <div class="time-slots">
+                        <div class="time-slot" onclick="event.stopPropagation(); selectTime(this)">08:00 PM</div>
+                        <div class="time-slot" onclick="event.stopPropagation(); selectTime(this)">09:00 PM</div>
+                        <div class="time-slot" onclick="event.stopPropagation(); selectTime(this)">10:00 PM</div>
+                    </div>
+                </div>
+
+                <div class="slot-card" onclick="selectDate(this, 'tomorrow')">
+                    <h3>Tomorrow</h3>
+                    <div class="time-slots">
+                        <div class="time-slot" onclick="event.stopPropagation(); selectTime(this)">08:00 PM</div>
+                        <div class="time-slot" onclick="event.stopPropagation(); selectTime(this)">09:00 PM</div>
+                        <div class="time-slot" onclick="event.stopPropagation(); selectTime(this)">10:00 PM</div>
+                    </div>
+                </div>
+
+                <div class="slot-card" onclick="selectDate(this, 'dayAfter')">
+                    <h3>Day After Tomorrow</h3>
+                    <div class="time-slots">
+                        <div class="time-slot" onclick="event.stopPropagation(); selectTime(this)">08:00 PM</div>
+                        <div class="time-slot" onclick="event.stopPropagation(); selectTime(this)">09:00 PM</div>
+                        <div class="time-slot" onclick="event.stopPropagation(); selectTime(this)">10:00 PM</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="book-button" onclick="bookSlot()">Book Session</button>
+        </div>
+    </div>
+
+    <footer class="footer">All rights reserved © Chetan Chauhan</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

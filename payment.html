@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="payment-container">
+        <h1>Complete Your Payment</h1>
+        <p>Complete payment to confirm your booking.</p>
+        <button onclick="completePayment()" class="pay-now">Pay Now</button>
+    </div>
+
+    <script>
+        function completePayment() {
+            // alert("Processing payment...");
+    
+            const params = new URLSearchParams(window.location.search);
+            const course = params.get("course");
+            const date = params.get("date");
+            const time = params.get("time");
+
+            console.log(course, date, time);
+
+            console.log("done bro!!");
+
+            window.location.href = `https://chetan1930.github.io/My-Payment-Page/?course=${course}&date=${date}&time=${time}&status=confirmed`;
+        }
+    </script>
+</body>
+
+</html>
